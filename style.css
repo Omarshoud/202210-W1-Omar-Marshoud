@@ -1,0 +1,86 @@
+* {
+    box-sizing: border-box;
+    padding: 0;
+    margin: 0;
+}
+html {
+    font-family: 'Times New Roman', Times, serif;
+    font-size: 30px;
+}
+.container {
+    display: flex;
+    justify-content: center;
+    align-items: center;
+    height: 100vh;
+    padding: 15px;
+    background: rgb(2,0,36);
+    background: linear-gradient(90deg, rgba(2,0,36,1) 0%, rgba(9,105,121,1) 55%, rgba(0,212,255,1) 100%);
+}
+.calculator {
+    display: flex;
+    flex-direction: column;
+    width: 300px; 
+    border: 1px solid rgba(60, 63, 64, 0.494);
+    border-radius: 20px;
+
+}
+.calculator-display {
+    color: white;
+    background-color: rgba(24, 23, 23, 0.746);
+    padding: 25px 15px;
+    width: 100%;
+    text-align: right;
+    border: 1px solid rgba(39, 37, 37, 0.828);
+    border-top-left-radius: 15px;
+    border-top-right-radius: 15px;
+   overflow-x: auto; /*esto es para que no rebose el limite y haya un scroll horizontal(x)*/
+    
+}
+.calculator-keypad {
+    display: flex;
+    width: 100%;
+    
+}
+
+.keypad-numbers {
+    color: white;
+    display: flex;
+    width: 100%;
+    flex-wrap: wrap;/*cuando los botones superen el ancho de 500px, se forma fila debajo*/
+    
+}
+
+.keypad-button {
+    width: 25%;/*para que entren 4 botones por fila en los 300px que hemos dado a la calc*/
+    padding: 15px 0;
+    text-align:center;
+    cursor: pointer;
+    background-color: rgba(128, 128, 128, 0.675);
+    
+}
+
+.keypad-button:hover {
+    filter: brightness(90%);
+    color: rgb(255, 255, 255);
+
+}
+
+.keypad-button.orange {
+    background-color:rgb(230, 139, 13) ;
+    
+    
+}
+.keypad-button.greystrong {
+    background-color: rgba(71, 66, 66, 0.752);
+}
+
+.keypad-button.large {
+    width:50%
+}
+#equal {
+    border-bottom-right-radius: 40px 40px
+}
+
+#zero {
+    border-bottom-left-radius: 40px 40px
+}
